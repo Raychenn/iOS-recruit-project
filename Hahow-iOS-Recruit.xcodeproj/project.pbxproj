@@ -9,13 +9,31 @@
 /* Begin PBXBuildFile section */
 		65E9E1E7270C301A00DDEADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1E6270C301A00DDEADC /* AppDelegate.swift */; };
 		65E9E1E9270C301A00DDEADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1E8270C301A00DDEADC /* SceneDelegate.swift */; };
-		65E9E1EB270C301A00DDEADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1EA270C301A00DDEADC /* ViewController.swift */; };
+		65E9E1EB270C301A00DDEADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1EA270C301A00DDEADC /* HomeViewController.swift */; };
 		65E9E1EE270C301A00DDEADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E1EC270C301A00DDEADC /* Main.storyboard */; };
 		65E9E1F0270C301B00DDEADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E1EF270C301B00DDEADC /* Assets.xcassets */; };
 		65E9E1F3270C301B00DDEADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E1F1270C301B00DDEADC /* LaunchScreen.storyboard */; };
 		65E9E1FE270C301B00DDEADC /* Hahow_iOS_RecruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1FD270C301B00DDEADC /* Hahow_iOS_RecruitTests.swift */; };
 		65E9E209270C301B00DDEADC /* Hahow_iOS_RecruitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E208270C301B00DDEADC /* Hahow_iOS_RecruitUITests.swift */; };
-		65E9E217270C307D00DDEADC /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E216270C307D00DDEADC /* data.json */; };
+		ED174C4D2BF737F6006FAD4D /* articles.json in Resources */ = {isa = PBXBuildFile; fileRef = ED174C4C2BF737F5006FAD4D /* articles.json */; };
+		ED174C4F2BF737FC006FAD4D /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = ED174C4E2BF737FC006FAD4D /* courses.json */; };
+		ED174C552BF85B61006FAD4D /* ThumbnailCourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C542BF85B61006FAD4D /* ThumbnailCourseCollectionViewCell.swift */; };
+		ED174C572BF85B73006FAD4D /* CourseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C562BF85B73006FAD4D /* CourseCollectionViewCell.swift */; };
+		ED174C592BF85B7F006FAD4D /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C582BF85B7F006FAD4D /* ArticleCollectionViewCell.swift */; };
+		ED174C612BF85CA7006FAD4D /* Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C602BF85CA7006FAD4D /* Interface.swift */; };
+		ED174C632BF8621B006FAD4D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C622BF8621B006FAD4D /* UIView+Extensions.swift */; };
+		ED174C652BF864A8006FAD4D /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C642BF864A8006FAD4D /* Color+Extensions.swift */; };
+		ED174C672BF867BA006FAD4D /* CourseCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C662BF867BA006FAD4D /* CourseCollectionViewCellViewModel.swift */; };
+		ED174C6A2BF86871006FAD4D /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C692BF86871006FAD4D /* HomePresenter.swift */; };
+		ED174C732BF87588006FAD4D /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C722BF87588006FAD4D /* Course.swift */; };
+		ED174C752BF875A7006FAD4D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C742BF875A7006FAD4D /* Article.swift */; };
+		ED174C772BF87A09006FAD4D /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C762BF87A09006FAD4D /* DataLoader.swift */; };
+		ED174C792BF88300006FAD4D /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C782BF88300006FAD4D /* HomeInteractor.swift */; };
+		ED174C7B2BF884B6006FAD4D /* ObservableObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C7A2BF884B6006FAD4D /* ObservableObjects.swift */; };
+		ED174C7F2BF88795006FAD4D /* ArticleCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C7E2BF88795006FAD4D /* ArticleCollectionViewCellViewModel.swift */; };
+		ED174C812BF901A2006FAD4D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C802BF901A2006FAD4D /* UIImage+Extensions.swift */; };
+		ED174C852BF90B77006FAD4D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C842BF90B77006FAD4D /* LoadingView.swift */; };
+		ED174C872BF90BC4006FAD4D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +57,7 @@
 		65E9E1E3270C301A00DDEADC /* Hahow-iOS-Recruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hahow-iOS-Recruit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E9E1E6270C301A00DDEADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65E9E1E8270C301A00DDEADC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		65E9E1EA270C301A00DDEADC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65E9E1EA270C301A00DDEADC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		65E9E1ED270C301A00DDEADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65E9E1EF270C301B00DDEADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65E9E1F2270C301B00DDEADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +68,25 @@
 		65E9E204270C301B00DDEADC /* Hahow-iOS-RecruitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hahow-iOS-RecruitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E9E208270C301B00DDEADC /* Hahow_iOS_RecruitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hahow_iOS_RecruitUITests.swift; sourceTree = "<group>"; };
 		65E9E20A270C301B00DDEADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65E9E216270C307D00DDEADC /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		ED174C4C2BF737F5006FAD4D /* articles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
+		ED174C4E2BF737FC006FAD4D /* courses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
+		ED174C542BF85B61006FAD4D /* ThumbnailCourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED174C562BF85B73006FAD4D /* CourseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED174C582BF85B7F006FAD4D /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED174C602BF85CA7006FAD4D /* Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interface.swift; sourceTree = "<group>"; };
+		ED174C622BF8621B006FAD4D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		ED174C642BF864A8006FAD4D /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		ED174C662BF867BA006FAD4D /* CourseCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		ED174C692BF86871006FAD4D /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		ED174C722BF87588006FAD4D /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		ED174C742BF875A7006FAD4D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		ED174C762BF87A09006FAD4D /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		ED174C782BF88300006FAD4D /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		ED174C7A2BF884B6006FAD4D /* ObservableObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjects.swift; sourceTree = "<group>"; };
+		ED174C7E2BF88795006FAD4D /* ArticleCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		ED174C802BF901A2006FAD4D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		ED174C842BF90B77006FAD4D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +137,16 @@
 		65E9E1E5270C301A00DDEADC /* Hahow-iOS-Recruit */ = {
 			isa = PBXGroup;
 			children = (
-				65E9E216270C307D00DDEADC /* data.json */,
-				65E9E1E6270C301A00DDEADC /* AppDelegate.swift */,
-				65E9E1E8270C301A00DDEADC /* SceneDelegate.swift */,
-				65E9E1EA270C301A00DDEADC /* ViewController.swift */,
+				ED174C822BF90830006FAD4D /* ViewController */,
+				ED174C712BF8757D006FAD4D /* Models */,
+				ED174C6C2BF874B3006FAD4D /* Service */,
+				ED174C6B2BF86876006FAD4D /* Interactor */,
+				ED174C682BF86855006FAD4D /* Presenter */,
+				ED174C5F2BF85C9C006FAD4D /* Utilities */,
+				ED174C5A2BF85BC7006FAD4D /* Extensions */,
+				ED174C532BF85B30006FAD4D /* MockData */,
+				ED174C512BF85AF8006FAD4D /* ViewModels */,
+				ED174C502BF85AEB006FAD4D /* Views */,
 				65E9E1EC270C301A00DDEADC /* Main.storyboard */,
 				65E9E1EF270C301B00DDEADC /* Assets.xcassets */,
 				65E9E1F1270C301B00DDEADC /* LaunchScreen.storyboard */,
@@ -129,6 +171,98 @@
 				65E9E20A270C301B00DDEADC /* Info.plist */,
 			);
 			path = "Hahow-iOS-RecruitUITests";
+			sourceTree = "<group>";
+		};
+		ED174C502BF85AEB006FAD4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C542BF85B61006FAD4D /* ThumbnailCourseCollectionViewCell.swift */,
+				ED174C562BF85B73006FAD4D /* CourseCollectionViewCell.swift */,
+				ED174C582BF85B7F006FAD4D /* ArticleCollectionViewCell.swift */,
+				ED174C842BF90B77006FAD4D /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED174C512BF85AF8006FAD4D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C662BF867BA006FAD4D /* CourseCollectionViewCellViewModel.swift */,
+				ED174C7E2BF88795006FAD4D /* ArticleCollectionViewCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		ED174C532BF85B30006FAD4D /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C4E2BF737FC006FAD4D /* courses.json */,
+				ED174C4C2BF737F5006FAD4D /* articles.json */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		ED174C5A2BF85BC7006FAD4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C622BF8621B006FAD4D /* UIView+Extensions.swift */,
+				ED174C642BF864A8006FAD4D /* Color+Extensions.swift */,
+				ED174C802BF901A2006FAD4D /* UIImage+Extensions.swift */,
+				ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED174C5F2BF85C9C006FAD4D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C602BF85CA7006FAD4D /* Interface.swift */,
+				ED174C7A2BF884B6006FAD4D /* ObservableObjects.swift */,
+				65E9E1E6270C301A00DDEADC /* AppDelegate.swift */,
+				65E9E1E8270C301A00DDEADC /* SceneDelegate.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		ED174C682BF86855006FAD4D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C692BF86871006FAD4D /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ED174C6B2BF86876006FAD4D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C782BF88300006FAD4D /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ED174C6C2BF874B3006FAD4D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C762BF87A09006FAD4D /* DataLoader.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ED174C712BF8757D006FAD4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED174C722BF87588006FAD4D /* Course.swift */,
+				ED174C742BF875A7006FAD4D /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED174C822BF90830006FAD4D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65E9E1EA270C301A00DDEADC /* HomeViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +371,8 @@
 				65E9E1F3270C301B00DDEADC /* LaunchScreen.storyboard in Resources */,
 				65E9E1F0270C301B00DDEADC /* Assets.xcassets in Resources */,
 				65E9E1EE270C301A00DDEADC /* Main.storyboard in Resources */,
-				65E9E217270C307D00DDEADC /* data.json in Resources */,
+				ED174C4D2BF737F6006FAD4D /* articles.json in Resources */,
+				ED174C4F2BF737FC006FAD4D /* courses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +397,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E9E1EB270C301A00DDEADC /* ViewController.swift in Sources */,
+				65E9E1EB270C301A00DDEADC /* HomeViewController.swift in Sources */,
+				ED174C7B2BF884B6006FAD4D /* ObservableObjects.swift in Sources */,
 				65E9E1E7270C301A00DDEADC /* AppDelegate.swift in Sources */,
+				ED174C6A2BF86871006FAD4D /* HomePresenter.swift in Sources */,
+				ED174C792BF88300006FAD4D /* HomeInteractor.swift in Sources */,
+				ED174C7F2BF88795006FAD4D /* ArticleCollectionViewCellViewModel.swift in Sources */,
+				ED174C632BF8621B006FAD4D /* UIView+Extensions.swift in Sources */,
+				ED174C612BF85CA7006FAD4D /* Interface.swift in Sources */,
+				ED174C652BF864A8006FAD4D /* Color+Extensions.swift in Sources */,
+				ED174C552BF85B61006FAD4D /* ThumbnailCourseCollectionViewCell.swift in Sources */,
+				ED174C732BF87588006FAD4D /* Course.swift in Sources */,
+				ED174C672BF867BA006FAD4D /* CourseCollectionViewCellViewModel.swift in Sources */,
+				ED174C872BF90BC4006FAD4D /* UIViewController+Extensions.swift in Sources */,
+				ED174C592BF85B7F006FAD4D /* ArticleCollectionViewCell.swift in Sources */,
+				ED174C772BF87A09006FAD4D /* DataLoader.swift in Sources */,
+				ED174C572BF85B73006FAD4D /* CourseCollectionViewCell.swift in Sources */,
+				ED174C812BF901A2006FAD4D /* UIImage+Extensions.swift in Sources */,
 				65E9E1E9270C301A00DDEADC /* SceneDelegate.swift in Sources */,
+				ED174C852BF90B77006FAD4D /* LoadingView.swift in Sources */,
+				ED174C752BF875A7006FAD4D /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8572WS27HD;
 				INFOPLIST_FILE = "Hahow-iOS-Recruit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +612,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8572WS27HD;
 				INFOPLIST_FILE = "Hahow-iOS-Recruit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
