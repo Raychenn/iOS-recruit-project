@@ -34,6 +34,9 @@
 		ED174C852BF90B77006FAD4D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C842BF90B77006FAD4D /* LoadingView.swift */; };
 		ED174C872BF90BC4006FAD4D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */; };
 		ED174C8B2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C8A2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift */; };
+		ED174C8D2BFCE740006FAD4D /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C8C2BFCE740006FAD4D /* TestData.swift */; };
+		ED174C8F2BFCEA4C006FAD4D /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C8E2BFCEA4C006FAD4D /* HomePresenterTests.swift */; };
+		ED174C912BFCEA5B006FAD4D /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C902BFCEA5B006FAD4D /* HomeInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		ED174C842BF90B77006FAD4D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		ED174C8A2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionHeaderView.swift; sourceTree = "<group>"; };
+		ED174C8C2BFCE740006FAD4D /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		ED174C8E2BFCEA4C006FAD4D /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		ED174C902BFCEA5B006FAD4D /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,9 @@
 			children = (
 				65E9E1FD270C301B00DDEADC /* Hahow_iOS_RecruitTests.swift */,
 				65E9E1FF270C301B00DDEADC /* Info.plist */,
+				ED174C8C2BFCE740006FAD4D /* TestData.swift */,
+				ED174C8E2BFCEA4C006FAD4D /* HomePresenterTests.swift */,
+				ED174C902BFCEA5B006FAD4D /* HomeInteractorTests.swift */,
 			);
 			path = "Hahow-iOS-RecruitTests";
 			sourceTree = "<group>";
@@ -425,6 +434,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E9E1FE270C301B00DDEADC /* Hahow_iOS_RecruitTests.swift in Sources */,
+				ED174C8D2BFCE740006FAD4D /* TestData.swift in Sources */,
+				ED174C8F2BFCEA4C006FAD4D /* HomePresenterTests.swift in Sources */,
+				ED174C912BFCEA5B006FAD4D /* HomeInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,7 +638,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Hahow-iOS-RecruitTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,7 +659,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Hahow-iOS-RecruitTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
