@@ -5,25 +5,24 @@
 //  Created by Boray Chen on 2024/5/18.
 //
 
-import Foundation
+import UIKit
 
-protocol HomeInteractorDelegate {
+protocol HomeInteractorProtocol {
     var didLoadHomeData: ObservableObject<HomeData?> { get set }
     var errorLoadHomeData: ObservableObject<Error?> { get set }
+    func loadData()
 }
 
 struct HomeData {
-    let courseViewModels: [CourseCollectionViewCellViewModel]
-    let articleViewModels: [ArticleCollectionViewCellViewModel]
+    let courses: [Course]
+    let articles: [Article]
 }
 
-class HomeInteractor: HomeInteractorDelegate {
+// Responsible for handling view actions
+class HomeInteractor: HomeInteractorProtocol {
     private let loader: DataLoaderProtocol
-    
     private let group = DispatchGroup()
-    
     private var courses: [Course]?
-    
     private var articles: [Article]?
     
     var didLoadHomeData: ObservableObject<HomeData?> = ObservableObject(value: nil)
@@ -64,34 +63,7 @@ class HomeInteractor: HomeInteractorDelegate {
         }
 
         group.notify(queue: .main) {
-            self.didLoadHomeData.value = HomeData(courseViewModels: self.map(self.courses),
-                                                  articleViewModels: self.map(self.articles))
+            self.didLoadHomeData.value = HomeData(courses: self.courses ?? [], articles: self.articles ?? [])
         }
-    }
-    
-    private func map(_ courses: [Course]?) -> [CourseCollectionViewCellViewModel] {
-        return courses?.compactMap { course in
-            return CourseCollectionViewCellViewModel(thumbnailImageURLString: course.coverImage.url,
-                                                     title: course.title,
-                                                     averageRating: course.averageRating,
-                                                     totalRatings: course.numRating,
-                                                     videoDurationMinutes: convertToMinutes(from: course.totalVideoLengthInSeconds),
-                                                     totalTicketsSold: course.numSoldTickets)
-        } ?? []
-    }
-    
-    private func map(_ articles: [Article]?) -> [ArticleCollectionViewCellViewModel] {
-        return articles?.compactMap { article in
-            return ArticleCollectionViewCellViewModel(articleImageURLString: article.coverImage.url,
-                                                      title: article.title,
-                                                      subtitle: article.previewDescription,
-                                                      creator: article.creator.name,
-                                                      creatorProfileImageURLString: article.creator.profileImageUrl,
-                                                      viewCounts: article.viewCount)
-        } ?? []
-    }
-    
-    private func convertToMinutes(from seconds: Int) -> Int {
-        seconds / 60
     }
 }

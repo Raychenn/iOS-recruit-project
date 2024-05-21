@@ -8,7 +8,7 @@ import UIKit
 
 extension UIView {
     static func className() -> String {
-        return String(describing: type(of: self))
+        return String(describing: self)
     }
 
     func anchor(top: NSLayoutYAxisAnchor? = nil,

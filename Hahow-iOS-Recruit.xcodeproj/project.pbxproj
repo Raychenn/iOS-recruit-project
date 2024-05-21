@@ -10,7 +10,6 @@
 		65E9E1E7270C301A00DDEADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1E6270C301A00DDEADC /* AppDelegate.swift */; };
 		65E9E1E9270C301A00DDEADC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1E8270C301A00DDEADC /* SceneDelegate.swift */; };
 		65E9E1EB270C301A00DDEADC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1EA270C301A00DDEADC /* HomeViewController.swift */; };
-		65E9E1EE270C301A00DDEADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E1EC270C301A00DDEADC /* Main.storyboard */; };
 		65E9E1F0270C301B00DDEADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E1EF270C301B00DDEADC /* Assets.xcassets */; };
 		65E9E1F3270C301B00DDEADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E9E1F1270C301B00DDEADC /* LaunchScreen.storyboard */; };
 		65E9E1FE270C301B00DDEADC /* Hahow_iOS_RecruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9E1FD270C301B00DDEADC /* Hahow_iOS_RecruitTests.swift */; };
@@ -34,6 +33,7 @@
 		ED174C812BF901A2006FAD4D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C802BF901A2006FAD4D /* UIImage+Extensions.swift */; };
 		ED174C852BF90B77006FAD4D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C842BF90B77006FAD4D /* LoadingView.swift */; };
 		ED174C872BF90BC4006FAD4D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */; };
+		ED174C8B2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED174C8A2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 		65E9E1E6270C301A00DDEADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65E9E1E8270C301A00DDEADC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		65E9E1EA270C301A00DDEADC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		65E9E1ED270C301A00DDEADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65E9E1EF270C301B00DDEADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65E9E1F2270C301B00DDEADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65E9E1F4270C301B00DDEADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +86,7 @@
 		ED174C802BF901A2006FAD4D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		ED174C842BF90B77006FAD4D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		ED174C862BF90BC4006FAD4D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		ED174C8A2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,6 @@
 				ED174C532BF85B30006FAD4D /* MockData */,
 				ED174C512BF85AF8006FAD4D /* ViewModels */,
 				ED174C502BF85AEB006FAD4D /* Views */,
-				65E9E1EC270C301A00DDEADC /* Main.storyboard */,
 				65E9E1EF270C301B00DDEADC /* Assets.xcassets */,
 				65E9E1F1270C301B00DDEADC /* LaunchScreen.storyboard */,
 				65E9E1F4270C301B00DDEADC /* Info.plist */,
@@ -180,6 +179,7 @@
 				ED174C562BF85B73006FAD4D /* CourseCollectionViewCell.swift */,
 				ED174C582BF85B7F006FAD4D /* ArticleCollectionViewCell.swift */,
 				ED174C842BF90B77006FAD4D /* LoadingView.swift */,
+				ED174C8A2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,7 +370,6 @@
 			files = (
 				65E9E1F3270C301B00DDEADC /* LaunchScreen.storyboard in Resources */,
 				65E9E1F0270C301B00DDEADC /* Assets.xcassets in Resources */,
-				65E9E1EE270C301A00DDEADC /* Main.storyboard in Resources */,
 				ED174C4D2BF737F6006FAD4D /* articles.json in Resources */,
 				ED174C4F2BF737FC006FAD4D /* courses.json in Resources */,
 			);
@@ -400,6 +399,7 @@
 				65E9E1EB270C301A00DDEADC /* HomeViewController.swift in Sources */,
 				ED174C7B2BF884B6006FAD4D /* ObservableObjects.swift in Sources */,
 				65E9E1E7270C301A00DDEADC /* AppDelegate.swift in Sources */,
+				ED174C8B2BFA40BD006FAD4D /* HomeCollectionHeaderView.swift in Sources */,
 				ED174C6A2BF86871006FAD4D /* HomePresenter.swift in Sources */,
 				ED174C792BF88300006FAD4D /* HomeInteractor.swift in Sources */,
 				ED174C7F2BF88795006FAD4D /* ArticleCollectionViewCellViewModel.swift in Sources */,
@@ -452,14 +452,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		65E9E1EC270C301A00DDEADC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				65E9E1ED270C301A00DDEADC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		65E9E1F1270C301B00DDEADC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -595,6 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8572WS27HD;
 				INFOPLIST_FILE = "Hahow-iOS-Recruit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8572WS27HD;
 				INFOPLIST_FILE = "Hahow-iOS-Recruit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
