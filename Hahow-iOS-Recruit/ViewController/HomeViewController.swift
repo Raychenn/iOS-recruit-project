@@ -177,17 +177,21 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let isThumbnail = indexPath.section == 0 && indexPath.row == 0
+        let isCourse = indexPath.section == 0 && indexPath.row > 0
+        let isArticle = indexPath.section == 1
+        
         if isThumbnail, Interface.isIPad() {
-            return CGSize(width: UIScreen.main.bounds.width, height: 500)
+            return CGSize(width: UIScreen.main.bounds.width, height: 600)
         } else if isThumbnail, !Interface.isIPad() {
             return CGSize(width: UIScreen.main.bounds.width, height: 400)
-        } else if !isThumbnail, Interface.isIPad() {
-            // refactor padding to constants
+        } else if !isThumbnail, Interface.isIPad(), isCourse {
+            return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 110)
+        } else if !isThumbnail, !Interface.isIPad(), isCourse {
+            return CGSize(width: UIScreen.main.bounds.width, height: 100)
+        } else if isArticle, Interface.isIPad() {
             return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 150)
-        } else if indexPath.section == 0 && indexPath.row > 0 {
-            return CGSize(width: UIScreen.main.bounds.width, height: 110)
         } else {
-            return CGSize(width: UIScreen.main.bounds.width, height: 160)
+            return CGSize(width: UIScreen.main.bounds.width, height: 140)
         }
     }
 }

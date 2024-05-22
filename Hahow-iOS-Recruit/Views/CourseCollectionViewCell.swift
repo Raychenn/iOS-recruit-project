@@ -53,7 +53,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
     private let courseInfoContainerStackView: UIStackView = {
        let stack = UIStackView()
         stack.axis = .horizontal
-        stack.spacing = 12
+        stack.spacing = 10
         return stack
     }()
     
@@ -180,10 +180,11 @@ class CourseCollectionViewCell: UICollectionViewCell {
         courseTypeButton.anchor(bottom: thumnbnailContainerView.bottomAnchor,
                                right: thumnbnailContainerView.trailingAnchor)
         contentView.addSubview(thumnbnailContainerView)
-        let thumnbnailContainerViewWidth: CGFloat = Interface.isIPad() ? 160 : 180
-        let thumnbnailContainerViewHeight: CGFloat = Interface.isIPad() ? 90 : 100
+        let thumnbnailContainerViewWidth: CGFloat = Interface.isIPad() ? 150 : 140
+        let thumnbnailContainerViewHeight: CGFloat = Interface.isIPad() ? 90 : 90
         thumnbnailContainerView.anchor(top: contentView.topAnchor,
                                   left: contentView.leadingAnchor,
+                                  paddingLeft: 10,
                                   width: thumnbnailContainerViewWidth,
                                   height: thumnbnailContainerViewHeight)
         

@@ -181,7 +181,7 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
         courseTypeButton.anchor(bottom: thumnbnailContainerView.bottomAnchor,
                                right: thumnbnailContainerView.trailingAnchor)
         contentView.addSubview(thumnbnailContainerView)
-        let thumnbnailContainerViewHeight: CGFloat = Interface.isIPad() ? 400 : 300
+        let thumnbnailContainerViewHeight: CGFloat = Interface.isIPad() ? 500 : 300
         thumnbnailContainerView.anchor(top: contentView.topAnchor,
                                   left: contentView.leadingAnchor,
                                   right: contentView.trailingAnchor,
