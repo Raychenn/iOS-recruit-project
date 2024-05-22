@@ -19,7 +19,7 @@ class HomePresenterTests: XCTestCase {
     
     func testOnlyThreeOfRowsForCourses() {
         let mockInteractor = MockHomeInteractor()
-        mockInteractor.homeData = HomeData(courses: makeCourses(number: 3), articles: [])
+        mockInteractor.homeData = HomeData(courses: makeCourses(amount: 3), articles: [])
         let presenter = HomePresenter(interactor: mockInteractor)
         presenter.loadData()
         XCTAssertEqual(presenter.numberOfRowsInSection(0), 3)
@@ -28,7 +28,7 @@ class HomePresenterTests: XCTestCase {
     func testMaxThreeOfRowsForCoursesWithIPhone() {
         guard !Interface.isIPad() else { return }
         let mockInteractor = MockHomeInteractor()
-        mockInteractor.homeData = HomeData(courses: makeCourses(number: 6), articles: [])
+        mockInteractor.homeData = HomeData(courses: makeCourses(amount: 6), articles: [])
         let presenter = HomePresenter(interactor: mockInteractor)
         presenter.loadData()
         XCTAssertEqual(presenter.numberOfRowsInSection(0), 3)
@@ -37,7 +37,7 @@ class HomePresenterTests: XCTestCase {
     func testMaxFiveOfRowsForCoursesWithIpad() {
         guard Interface.isIPad() else { return }
         let mockInteractor = MockHomeInteractor()
-        mockInteractor.homeData = HomeData(courses: makeCourses(number: 6), articles: [])
+        mockInteractor.homeData = HomeData(courses: makeCourses(amount: 6), articles: [])
         let presenter = HomePresenter(interactor: mockInteractor)
         presenter.loadData()
         XCTAssertEqual(presenter.numberOfRowsInSection(0), 5)
@@ -45,7 +45,7 @@ class HomePresenterTests: XCTestCase {
     
     func testOnlyOneRowForArticles() {
         let mockInteractor = MockHomeInteractor()
-        mockInteractor.homeData = HomeData(courses: [], articles: makeArticles(number: 1))
+        mockInteractor.homeData = HomeData(courses: [], articles: makeArticles(amount: 1))
         let presenter = HomePresenter(interactor: mockInteractor)
         presenter.loadData()
         XCTAssertEqual(presenter.numberOfRowsInSection(1), 1)
@@ -54,7 +54,7 @@ class HomePresenterTests: XCTestCase {
     func testMaxSixOfRowsForArticlesWithIpad() {
         guard Interface.isIPad() else { return }
         let mockInteractor = MockHomeInteractor()
-        mockInteractor.homeData = HomeData(courses: [], articles: makeArticles(number: 7))
+        mockInteractor.homeData = HomeData(courses: [], articles: makeArticles(amount: 7))
         let presenter = HomePresenter(interactor: mockInteractor)
         presenter.loadData()
         XCTAssertEqual(presenter.numberOfRowsInSection(1), 6)
@@ -63,15 +63,17 @@ class HomePresenterTests: XCTestCase {
     func testMaxThreeOfRowsForArticlesWithIPhone() {
         guard !Interface.isIPad() else { return }
         let mockInteractor = MockHomeInteractor()
-        mockInteractor.homeData = HomeData(courses: [], articles: makeArticles(number: 7))
+        mockInteractor.homeData = HomeData(courses: [], articles: makeArticles(amount: 7))
         let presenter = HomePresenter(interactor: mockInteractor)
         presenter.loadData()
         XCTAssertEqual(presenter.numberOfRowsInSection(1), 3)
     }
     
-    func makeCourses(number: Int) -> [Course] {
+    // MARK: - Helpers
+    
+    func makeCourses(amount: Int) -> [Course] {
         var result: [Course] = []
-        for _ in 0..<number {
+        for _ in 0..<amount {
             let course = Course(id: "",
                                 status: "",
                                 successCriteria: Course.SuccessCriteria(numSoldTickets: 0),
@@ -90,9 +92,9 @@ class HomePresenterTests: XCTestCase {
         return result
     }
     
-    func makeArticles(number: Int) -> [Article] {
+    func makeArticles(amount: Int) -> [Article] {
         var result: [Article] = []
-        for _ in 0..<number {
+        for _ in 0..<amount {
             let article = Article(id: "",
                                   title: "",
                                   coverImage: Article.CoverImage(id: "", url: ""),

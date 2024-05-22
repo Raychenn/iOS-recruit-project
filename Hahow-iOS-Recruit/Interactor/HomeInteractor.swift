@@ -18,7 +18,12 @@ struct HomeData {
     let articles: [Article]
 }
 
-// Responsible for handling view actions
+/*
+ Responsible for 
+ 1. handling view actions,
+ 2. performing business logics
+ 3. fetching data from network or a local database, processing it, and returning it to the presenter.
+*/
 class HomeInteractor: HomeInteractorProtocol {
     private let loader: DataLoaderProtocol
     private let group = DispatchGroup()

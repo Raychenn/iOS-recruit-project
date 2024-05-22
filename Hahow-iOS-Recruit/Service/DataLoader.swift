@@ -30,7 +30,10 @@ protocol DataLoaderProtocol {
         completion: @escaping (Result<T, Error>) -> Void
     ) where T : Decodable
 }
-
+/*
+ The network manager (aka: network layer), typically interacts with the interactor to provide data obtained from the network or local database.
+ It abstracts away the details of network communication, making it easier to maintain and test the networking code separately from the rest of the application.
+*/
 class DataLoader: DataLoaderProtocol {
     static let shared = DataLoader()
     

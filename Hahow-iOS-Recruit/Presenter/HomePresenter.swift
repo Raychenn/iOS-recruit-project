@@ -16,6 +16,13 @@ protocol HomePresenterProtocol: AnyObject {
     func loadData()
 }
 
+// Presenter is similar to ViewModel has below responsibilities
+/*
+  1. acts as an intermediary between the view and the interactor.
+  2. receives input from the view (user actions, such as button taps and translates it into commands for the interactor.
+  3. receives data from the interactor and formats it for presentation in the view.
+  4. responsible for updating the view's state based on the data received from the interactor.
+*/
 class HomePresenter: HomePresenterProtocol {
     
     private let interactor: HomeInteractorProtocol

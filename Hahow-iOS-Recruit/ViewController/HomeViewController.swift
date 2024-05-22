@@ -65,6 +65,7 @@ class HomeViewController: UIViewController {
         }
         
         presenter.errorLoadHomeData.bind { error in
+            // can handle error according to specification
             print("error loading data: \(String(describing: error))")
         }
     }
