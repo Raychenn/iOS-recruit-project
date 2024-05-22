@@ -88,7 +88,7 @@ class HomePresenter: HomePresenterProtocol {
             if Interface.isIPad() {
                 return articleViewModels.count > 6 ? 6 : articleViewModels.count
             } else {
-                return articleViewModels.count > 5 ? 5 : articleViewModels.count
+                return articleViewModels.count > 3 ? 3 : articleViewModels.count
             }
         }
     }

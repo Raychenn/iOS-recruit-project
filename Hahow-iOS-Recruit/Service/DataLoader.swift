@@ -7,9 +7,20 @@
 
 import Foundation
 
-enum APIError: Error {
+enum APIError: Error, Equatable {
+    static func == (lhs: APIError, rhs: APIError) -> Bool {
+        switch (lhs, rhs) {
+        case (.decodeError(let descriptionLeft), .decodeError(let descriptionRight)):
+            return descriptionLeft == descriptionRight
+        case (.unknownError(let descriptionLeft), .unknownError(let descriptionRight)):
+            return descriptionLeft == descriptionRight
+        default:
+            return false
+        }
+    }
+    
     case decodeError(description: String)
-    case unknownError(error: Error)
+    case unknownError(description: String)
 }
 
 protocol DataLoaderProtocol {

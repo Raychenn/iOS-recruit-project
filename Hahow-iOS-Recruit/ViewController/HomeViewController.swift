@@ -183,9 +183,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: UIScreen.main.bounds.width, height: 400)
         } else if !isThumbnail, Interface.isIPad() {
             // refactor padding to constants
-            return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 100)
+            return CGSize(width: (UIScreen.main.bounds.width / 2) - 20, height: 150)
         } else if indexPath.section == 0 && indexPath.row > 0 {
-            return CGSize(width: UIScreen.main.bounds.width, height: 100)
+            return CGSize(width: UIScreen.main.bounds.width, height: 110)
         } else {
             return CGSize(width: UIScreen.main.bounds.width, height: 160)
         }

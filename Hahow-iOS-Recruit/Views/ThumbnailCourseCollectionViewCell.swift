@@ -54,12 +54,13 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         stack.spacing = 20
+        stack.setContentHuggingPriority(.required, for: .horizontal)
         return stack
     }()
     
     private let courseRatingLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .yellow
+        label.textColor = .orange
         label.font = .systemFont(ofSize: Constants.subtitleFontSize)
         label.text = "Course Name"
         return label
@@ -68,7 +69,7 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
     private let courseRatingImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.tintColor = .yellow
+        imageView.tintColor = .orange
         imageView.image = UIImage(systemName: "star.fill")
         imageView.clipsToBounds = true
         imageView.setDimensions(height: 15, width: 15)
@@ -118,6 +119,12 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    private let courseAccomplishedUnderlineView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .orange
+        return view
+    }()
+    
     private let courseDaysLeftImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -154,7 +161,7 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
         courseTitleLabel.text = viewModel.title
         if let incubatingInfo = viewModel.incubatingInfo {
             courseAccomplishedRatioLabel.text = "達標 \(incubatingInfo.accomplishedRatioString)%"
-            courseDaysLeftLabel.text = "倒數 \(incubatingInfo.numberOfDaysLeft)"
+            courseDaysLeftLabel.text = "倒數 \(incubatingInfo.numberOfDaysLeft) 天"
         } else if let publishedInfo = viewModel.publishedInfo {
             courseRatingLabel.text = "\(publishedInfo.averageRating)(\(publishedInfo.totalRating))"
             courseTimeLabel.text = "\(publishedInfo.videoDurationMinutes)分"
@@ -166,7 +173,7 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
     }
     
     func setupUI(with viewModel: CourseCollectionViewCellViewModel) {
-        backgroundColor = .blue
+        courseInfoContainerStackView.arrangedSubviews.forEach({ courseInfoContainerStackView.removeArrangedSubview($0) })
         // thumbnail
         thumnbnailContainerView.addSubview(thumbnailImageView)
         thumnbnailContainerView.addSubview(courseTypeButton)
@@ -222,6 +229,14 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
         courseInfoContainerStackView.anchor(top: courseTitleLabel.bottomAnchor,
                                             left: courseTitleLabel.leadingAnchor,
                                             paddingTop: 20)
+        
+        switch viewModel.status {
+        case .incubating:
+            contentView.addSubview(courseAccomplishedUnderlineView)
+            courseAccomplishedUnderlineView.anchor(top: courseAccomplishedRatioLabel.bottomAnchor, left: courseAccomplishedRatioLabel.leadingAnchor, right: courseAccomplishedRatioLabel.trailingAnchor, height: 4)
+        default:
+            break
+        }
     }
     
     func makeInfoStackView(with subviews: [UIView]) -> UIStackView {
@@ -232,6 +247,3 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
         return stack
     }
 }
-
-// MARK: - Constants (use enum)
-// note: should have a course type (INCUBATING, PUBLISHED) enum as well

@@ -14,8 +14,8 @@ class CourseCollectionViewCell: UICollectionViewCell {
     
     enum Constants {
         static let titleFontSize: CGFloat = 15
-        static let courseTypeFontSize: CGFloat = 12
-        static let subtitleFontSize: CGFloat = 10
+        static let courseTypeFontSize: CGFloat = 15
+        static let subtitleFontSize: CGFloat = 13
     }
     
     private let thumnbnailContainerView: UIView = {
@@ -68,7 +68,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
     private let courseRatingImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.tintColor = .yellow
+        imageView.tintColor = .orange
         imageView.image = UIImage(systemName: "star.fill")
         imageView.setDimensions(height: 15, width: 15)
         imageView.clipsToBounds = true
@@ -118,6 +118,12 @@ class CourseCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
+    private let courseAccomplishedUnderlineView: UIView = {
+       let view = UIView()
+        view.backgroundColor = .orange
+        return view
+    }()
+    
     private let courseDaysLeftImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -154,7 +160,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
         courseTitleLabel.text = viewModel.title
         if let incubatingInfo = viewModel.incubatingInfo {
             courseAccomplishedRatioLabel.text = "達標 \(incubatingInfo.accomplishedRatioString)%"
-            courseDaysLeftLabel.text = "倒數 \(incubatingInfo.numberOfDaysLeft)"
+            courseDaysLeftLabel.text = "倒數 \(incubatingInfo.numberOfDaysLeft) 天"
         } else if let publishedInfo = viewModel.publishedInfo {
             courseRatingLabel.text = "\(publishedInfo.averageRating)(\(publishedInfo.totalRating))"
             courseTimeLabel.text = "\(publishedInfo.videoDurationMinutes)分"
@@ -166,7 +172,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
     }
     
     func setupUI(with viewModel: CourseCollectionViewCellViewModel) {
-        backgroundColor = .brown
+        courseInfoContainerStackView.arrangedSubviews.forEach({ courseInfoContainerStackView.removeArrangedSubview($0) })
         // thumbnail
         thumnbnailContainerView.addSubview(thumbnailImageView)
         thumnbnailContainerView.addSubview(courseTypeButton)
@@ -174,8 +180,8 @@ class CourseCollectionViewCell: UICollectionViewCell {
         courseTypeButton.anchor(bottom: thumnbnailContainerView.bottomAnchor,
                                right: thumnbnailContainerView.trailingAnchor)
         contentView.addSubview(thumnbnailContainerView)
-        let thumnbnailContainerViewWidth: CGFloat = Interface.isIPad() ? 160 : 100
-        let thumnbnailContainerViewHeight: CGFloat = Interface.isIPad() ? 90 : 50
+        let thumnbnailContainerViewWidth: CGFloat = Interface.isIPad() ? 160 : 180
+        let thumnbnailContainerViewHeight: CGFloat = Interface.isIPad() ? 90 : 100
         thumnbnailContainerView.anchor(top: contentView.topAnchor,
                                   left: contentView.leadingAnchor,
                                   width: thumnbnailContainerViewWidth,
@@ -222,6 +228,14 @@ class CourseCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(courseInfoContainerStackView)
         courseInfoContainerStackView.anchor(top: thumnbnailContainerView.bottomAnchor,
                                             left: courseTitleLabel.leadingAnchor, paddingTop: -20)
+        
+        switch viewModel.status {
+        case .incubating:
+            contentView.addSubview(courseAccomplishedUnderlineView)
+            courseAccomplishedUnderlineView.anchor(top: courseAccomplishedRatioLabel.bottomAnchor, left: courseAccomplishedRatioLabel.leadingAnchor, right: courseAccomplishedRatioLabel.trailingAnchor, height: 4)
+        default:
+            break
+        }
     }
     
     func makeInfoStackView(with subviews: [UIView]) -> UIStackView {

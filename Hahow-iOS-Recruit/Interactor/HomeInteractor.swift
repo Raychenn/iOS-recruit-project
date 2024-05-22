@@ -45,7 +45,9 @@ class HomeInteractor: HomeInteractorProtocol {
             case .success(let courses):
                 self.courses = courses
             case .failure(let error):
-                errorLoadHomeData.value = error
+                DispatchQueue.main.async {
+                    self.errorLoadHomeData.value = error
+                }
             }
         }
 
@@ -58,7 +60,9 @@ class HomeInteractor: HomeInteractorProtocol {
             case .success(let articles):
                 self.articles = articles.staffPickArticles
             case .failure(let error):
-                self.errorLoadHomeData.value = error
+                DispatchQueue.main.async {
+                    self.errorLoadHomeData.value = error
+                }
             }
         }
 

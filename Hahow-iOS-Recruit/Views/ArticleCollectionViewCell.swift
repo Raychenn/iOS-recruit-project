@@ -24,7 +24,7 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     
     private let articleTitleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0 
+        label.numberOfLines = 0
         label.textColor = .black
         label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .bold)
         return label
@@ -32,7 +32,7 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     
     private let articleSubtitleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .black
+        label.textColor = .lightGray
         label.numberOfLines = 2
         label.font = .systemFont(ofSize: Constants.subtitleFontSize)
         return label
@@ -100,7 +100,6 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        backgroundColor = .red
         contentView.addSubview(articleTitleLabel)
         articleTitleLabel.anchor(top: contentView.topAnchor,
                                  left: contentView.leadingAnchor,
@@ -111,19 +110,17 @@ class ArticleCollectionViewCell: UICollectionViewCell {
         
         contentView.addSubview(articleThumbnailImageView)
         articleThumbnailImageView.anchor(top: articleTitleLabel.bottomAnchor,
-                                         bottom: contentView.bottomAnchor,
                                          right: contentView.trailingAnchor,
-                                         paddingTop: 10,
-                                         paddingBottom: 10,
+                                         paddingTop: 7,
                                          paddingRight: 10,
                                          width: 150,
                                          height: 90)
 
         contentView.addSubview(articleSubtitleLabel)
-        articleSubtitleLabel.backgroundColor = .white
         articleSubtitleLabel.anchor(top: articleThumbnailImageView.topAnchor,
                                     left: articleTitleLabel.leadingAnchor,
                                     right: articleThumbnailImageView.leadingAnchor,
+                                    paddingTop: 10,
                                     paddingRight: 5)
 
         articleInfoContainerStackView.addArrangedSubview(makeInfoStackView(with: [
@@ -136,8 +133,7 @@ class ArticleCollectionViewCell: UICollectionViewCell {
             articleViewCountLabel
         ], spacing: 5))
         contentView.addSubview(articleInfoContainerStackView)
-        articleInfoContainerStackView.backgroundColor = .darkGray
-        articleInfoContainerStackView.anchor(top: articleSubtitleLabel.bottomAnchor, left: articleSubtitleLabel.leadingAnchor, paddingTop: 3)
+        articleInfoContainerStackView.anchor(left: articleSubtitleLabel.leadingAnchor, bottom: articleThumbnailImageView.bottomAnchor, paddingTop: 15, paddingBottom: 10)
     }
     
     func makeInfoStackView(with subviews: [UIView], spacing: CGFloat) -> UIStackView {
