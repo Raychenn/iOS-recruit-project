@@ -42,7 +42,7 @@ class CourseCollectionViewCell: UICollectionViewCell {
     private let courseTitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
-        label.numberOfLines = 1
+        label.numberOfLines = 2
         label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .bold)
         label.text = "Procreate 插畫入門-從素描到風格"
         label.lineBreakMode = .byCharWrapping

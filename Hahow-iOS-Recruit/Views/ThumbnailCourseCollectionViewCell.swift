@@ -43,6 +43,7 @@ class ThumbnailCourseCollectionViewCell: UICollectionViewCell {
     
     private let courseTitleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 2
         label.textColor = .black
         label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .bold)
         label.text = "Procreate 插畫入門-從素描到風格"

@@ -24,7 +24,7 @@ class ArticleCollectionViewCell: UICollectionViewCell {
     
     private let articleTitleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
+        label.numberOfLines = 2
         label.textColor = .black
         label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .bold)
         return label
