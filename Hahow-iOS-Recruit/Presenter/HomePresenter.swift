@@ -193,7 +193,6 @@ private extension HomePresenter {
             let components = calendar.dateComponents([.day], from: currentDate, to: targetDate)
             
             if let daysLeft = components.day {
-                print("Number of days left: \(daysLeft)")
                 return daysLeft
             } else {
                 return 0
